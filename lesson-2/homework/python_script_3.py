@@ -8,7 +8,9 @@ port = 1433
 database = 'master'
 pwd = '1234qwerASDF'
 
+
 con_str = f'DRIVER=FreeTDS;SERVER={server};PORT={port};DATABASE={database};UID={uid};PWD={pwd};TDS_VERSION=7.3'
+
 
 con = pyodbc.connect(con_str)
 cursor = con.cursor()
