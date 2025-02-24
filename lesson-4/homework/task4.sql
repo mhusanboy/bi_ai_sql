@@ -16,6 +16,7 @@ order by CASE
     end,
     letter
 
+
 -- b comes last
 select * from letters
 order by CASE
