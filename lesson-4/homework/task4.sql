@@ -1,34 +1,13 @@
+drop table if exists pq;
 
-create table letters
-(letter char(1));
-
-insert into letters
-values ('a'), ('a'), ('a'), 
-  ('b'), ('c'), ('d'), ('e'), ('f');
-
-
---b comes first
-
-select * from letters
-order by CASE
-    when letter = 'b' then 1
-    else 2
-    end,
-    letter
+create table pq(
+    id int, 
+    name varchar(10),
+    typed varchar(10)
+);
 
 
--- b comes last
-select * from letters
-order by CASE
-    when letter = 'b' then 2
-    else 1
-    end,
-    letter
+insert into pq
+VALUes(1, 'P', null), (1, null, 'Q');
 
--- b comes third
-
-select * from letters
-order by case
-    when letter = 'b' then 2.5
-    else row_number() over (order by letter)
-    end;
+select * from generate_series(1, 100);
