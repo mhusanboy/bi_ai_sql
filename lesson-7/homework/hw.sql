@@ -156,6 +156,7 @@ from Customers c
     join Products p 
     on p.ProductID = od.ProductID
 group by c.CustomerID, c.CustomerName
+
 having sum(IIf(p.Category = 'Stationery', 1, 0)) > 0;
 
 --task9
