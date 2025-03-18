@@ -1,8 +1,6 @@
 
 declare @date_i DATE = '2025/03/18';
 
-select datename(weekday, @date_i), datepart(weekday, @date_i)
-
 
 with cte as(
     select 
