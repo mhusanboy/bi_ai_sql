@@ -10,9 +10,7 @@
 
 
 drop PROCEDURE if exists select_Routines;
-go
-
-
+go 
 
 create PROCEDURE Select_Routines
     @db_name nvarchar(255) = NULL
@@ -105,4 +103,4 @@ BEGIN
     select * from @result_table;
 END;
 
-exec Select_Routines
+GO

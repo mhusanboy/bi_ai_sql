@@ -22,6 +22,7 @@ declare @result_table table(
 	DataType NVARCHAR(63)
 );
 
+
 while @i <= @count
 BEGIN
     with cte as (
