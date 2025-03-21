@@ -180,8 +180,7 @@ set @query = CONCAT(
         SELECT [dbo].[get_interval](interval_id) as interval, quantity FROM #result
     ) AS t
     PIVOT (
-        sum(quantity) FOR interval IN (', @intervals,')
-    ) AS pvt'
+        sum(quantity) FOR interval IN (', @intervals,')) AS pvt'
 )
 
 exec(@query);
