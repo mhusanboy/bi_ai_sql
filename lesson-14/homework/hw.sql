@@ -60,7 +60,7 @@ declare @html_body varchar(max) = '
 				<th>Table Name</th>
 				<th>Index Name</th>
 				<th>Index Type</th>
-				<th>Column Type</th>
+				<th>Column Name</th>
 			  </tr>
 			  ' +@tr +
 			  '
